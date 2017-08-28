@@ -477,6 +477,13 @@ class S3OptionsMenu(object):
                     M("View Test Result Reports", c="admin", f="result"),
                     M("Portable App", c="admin", f="portable")
                 )
+    # -------------------------------------------------------------------------
+    def sms_inbound(self):
+        return M(c="sms_inbound") (
+            M("sms_inbound", f="index") (
+                M("List", "list"),
+                )
+            )
 
     # -------------------------------------------------------------------------
     @staticmethod
